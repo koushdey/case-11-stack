@@ -74,4 +74,4 @@ configs:
 # This workflow file will NOT be part of the stack (new repo created). 
 # workflow could use the stack inputs using the notation : ${{ github.event.inputs.name }}
 init:
- uses: ".github/workflows/setup.yml"
+ uses: "setup.yml"
