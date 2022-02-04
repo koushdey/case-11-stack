@@ -15,6 +15,10 @@ branding:
 # Any input that is not explicitly configured as Repo/Environment secret will NOT be available in the new stack
 inputs:
 
+  - name: ENV-Name
+    description: Env name
+    required: true
+
   - name: REPO_SECRET
     description: Repo Secret
     is-secret: true
@@ -54,7 +58,7 @@ configs:
   
   # Environments & Secrets
  environments: 
-    - name: production
+    - name: ${{ inputs.ENV-Name }}
       parameters: 
         secrets:
           - name: ENV_SECRET_1
